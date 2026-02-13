@@ -1,5 +1,488 @@
 {
   "plantManager": {
-    "title": "Plant Manager"
+    "hero": {
+      "eyebrow": "MANTÉN LAS OPERACIONES EN MARCHA. ALCANZA TUS OBJETIVOS.",
+      "title": "Para el Gerente de Planta\nQue Quiere Liderar con\nConfianza",
+      "subtitle": "Toma decisiones más inteligentes, más rápido. Tractian te da claridad, control y confianza — para que lideres la planta y demuestres el ROI.",
+      "ctaPrimary": "Solicitar una Demo",
+      "quote": {
+        "text": "\"Con todo centralizado dentro de la plataforma de Tractian, por fin tenemos la visibilidad para actuar rápido, planificar mejor y mostrar resultados reales.\"",
+        "name": "Paul Morais",
+        "role": "Gerente de Planta",
+        "company": "The Fillo Factory"
+      }
+    },
+    "painPoints": {
+      "eyebrow": "POR QUÉ LOS GERENTES DE PLANTA ELIGEN TRACTIAN",
+      "title": "Gestiona la operación con más control sin cargar a tu equipo",
+      "items": [
+        {
+          "title": "Demuestra el ROI, no solo el esfuerzo",
+          "description": "Deja de debatir inversiones en mantenimiento. Tractian te da números reales ligados a resultados reales — fallas prevenidas, horas ahorradas, recursos optimizados. Es el tipo de dato que facilita las conversaciones de presupuesto."
+        },
+        {
+          "title": "Anticípate al downtime antes de que se convierta en crisis",
+          "description": "Detecta las primeras señales de falla y actúa antes de que se convierta en una crisis. Tractian ayuda a tu equipo a pasar de apagar incendios de forma reactiva a planificar de manera proactiva — con menos sorpresas y menos llamadas urgentes."
+        },
+        {
+          "title": "Opera con un equipo más ágil y efectivo",
+          "description": "La mano de obra es limitada, la capacitación toma tiempo y la rotación duele. Tractian le da a tu equipo herramientas intuitivas y potentes — ayudándoles a mejorar sus habilidades, resolver problemas más rápido, seguir planes con claridad y entregar más en cada turno."
+        },
+        {
+          "title": "Mantén auditorías simples y el cumplimiento cubierto",
+          "description": "Tractian ayuda a estandarizar tus procesos, organizar registros de mantenimiento y generar reportes confiables — para que las auditorías sean más fáciles, se reduzcan los riesgos y el cumplimiento forme parte de la rutina diaria."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Diseñado para una supervisión más inteligente y resultados reales",
+      "tabs": {
+        "0": {
+          "label": "Reportes para Escalabilidad",
+          "heading": "Muestra lo que funciona con reportes pensados para dar visibilidad a la dirección.",
+          "description": "Tractian rastrea las métricas que importan — desde tendencias de downtime hasta tasas de ejecución — para que puedas demostrar valor en cada revisión.",
+          "imageSrc": "/img/reports-for-scalability.png",
+          "bullets": {
+            "0": "Monitorea backlog, downtime, costos de mantenimiento y planificación financiera",
+            "1": "Exporta datos para auditorías, reportes y justificación de presupuesto",
+            "2": "Usa filtros por área, activo, tipo de falla o periodo",
+            "3": "Toma mejores decisiones basadas en tendencias reales de desempeño"
+          }
+        },
+        "1": {
+          "label": "Supervisión Operativa",
+          "heading": "Dirige la planta con claridad y control.",
+          "description": "Estandariza procedimientos de mantenimiento, reduce riesgos de seguridad y mantente siempre listo para auditorías. Con Tractian, el cumplimiento deja de ser un proceso paralelo — está integrado en la ejecución diaria del equipo.",
+          "imageSrc": "/img/operational-oversight.png",
+          "bullets": {
+            "0": "POE y permisos de trabajo adjuntos directamente a órdenes de trabajo e inspecciones",
+            "1": "Sigue tareas relacionadas con seguridad, validaciones y acciones vencidas",
+            "2": "Asegura repetibilidad y responsabilidad entre equipos y turnos",
+            "3": "Reportes automáticos de lo que se hizo, cuándo y por quién",
+            "4": "Exporta al instante registros y bitácoras para auditorías y revisiones de cumplimiento"
+          }
+        },
+        "2": {
+          "label": "Visibilidad Multisitio",
+          "heading": "Estandariza mantenimiento y confiabilidad en múltiples plantas sin aumentar la complejidad. ",
+          "description": "Gestiona y compara el desempeño de activos y equipos en un solo lugar.",
+          "imageSrc": "/img/multisite-visibility.png",
+          "bullets": {
+            "0": "Sigue KPIs entre plantas o unidades de negocio",
+            "1": "Unifica procesos, alertas y planificación en una sola plataforma",
+            "2": "Compara eficiencia y disponibilidad entre sitios",
+            "3": "Aplica aprendizajes de una planta a otras rápidamente"
+          }
+        },
+        "3": {
+          "label": "Sin Brechas de Mano de Obra",
+          "heading": "Anticípate a los desequilibrios de carga y asegúrate de que el equipo se enfoque en lo más importante.",
+          "description": "",
+          "imageSrc": "/img/no-labor-gaps.png",
+          "bullets": {
+            "0": "Visualiza la carga de trabajo de cada técnico o equipo. Toma decisiones basadas en datos para asegurar que no haya brechas ni equipos sobrecargados",
+            "1": "Detecta brechas o cuellos de botella en tu planificación",
+            "2": "Reduce el estrés y mejora resultados alineando tareas preventivas con prioridades reales",
+            "3": "Automatiza la programación para mantener todo en marcha"
+          }
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Tú diriges la planta. Nosotros te respaldamos.",
+      "items": [
+        {
+          "title": "Hecho para toda la planta",
+          "description": "Pon a todos en la misma página — sin más silos ni sistemas dispersos. Nuestras soluciones te ayudan a seguir mantenimiento, confiabilidad y ejecución en un solo lugar para que tu equipo se mueva más rápido.",
+          "icon": "/icons/built.svg"
+        },
+        {
+          "title": "Listo para ejecutar desde el primer día",
+          "description": "Evita capacitaciones largas y ramp-up lento. Con herramientas que tu equipo realmente usa, verás impacto rápidamente — sin necesitar más personal, consultores costosos o implementaciones complejas.",
+          "icon": "/icons/execution-ready.svg"
+        },
+        {
+          "title": "Soporte premium",
+          "description": "Nuestro equipo experto trabaja codo a codo contigo, desde la instalación hasta la expansión. Con soporte práctico, estamos en sitio cuando importa — ayudándote a capacitar equipos, ajustar configuraciones y alcanzar objetivos más rápido.",
+          "icon": "/icons/white-glove.svg"
+        }
+      ]
+    },
+    "hearIt": {
+      "title": "Escúchalo de quienes lo usan todos los días",
+      "quotes": [
+        {
+          "text": "Con todo centralizado dentro de la plataforma de Tractian, por fin tenemos la visibilidad para actuar rápido, planificar mejor y mostrar resultados reales.",
+          "name": "Paul M.",
+          "role": "Director de Mantenimiento",
+          "company": "The Fillo Factory",
+          "avatar": "/img/paul-v-img.png"
+        },
+        {
+          "text": "Me gusta que puedo monitorear todos nuestros activos desde un solo lugar. Si un motor tiene problemas en una parte de la planta y otro al otro lado, puedo básicamente diagnosticar ambos motores desde el mismo lugar.",
+          "name": "Nicholas D.",
+          "role": "Supervisor Líder de Mantenimiento",
+          "company": "Koch Foods",
+          "avatar": "/img/nicholas-d-img.png"
+        },
+        {
+          "text": "Ahora, cuando llego a la planta, solo inicio sesión y todo lo que necesito está ahí — instrucciones paso a paso, lo que tengo que hacer. Es mucho más fácil, mucho más rápido y sin tantas molestias.",
+          "name": "Fabiano J.",
+          "role": "Gerente de Flota de Alquiler",
+          "company": "CZM",
+          "avatar": "/img/fabiano-img.png"
+        },
+        {
+          "text": "Nada fue demasiado problema para ellos, y fueron hasta el último detalle para entender el negocio de Lyka y el plan estratégico de cuidado de activos a corto y largo plazo. Ese nivel de empeño por entender hizo que la implementación fuera especialmente fácil de usar.",
+          "name": "Andy B.",
+          "role": "Head de Manufactura y Supply Chain",
+          "company": "Lyka",
+          "avatar": "/img/andy-img.png"
+        }
+      ],
+      "logos": {
+        "label": "Con la confianza de cientos de líderes de fabricantes de EE. UU. y de todo el mundo",
+        "items": [
+          "/img/georgiaAquarium-img.png",
+          "/img/airLiquide-img.png",
+          "/img/ScottsMiracleGro-img.png",
+          "/img/ingredion-img.png",
+          "/img/kraftHeinz-img.png",
+          "/img/whirlpool-img.png",
+          "/img/csx-img.png",
+          "/img/verizon-img.png",
+          "/img/kubota-img.png",
+          "/img/cummins-img.png",
+          "/img/mauser-img.png",
+          "/img/greif-img.png"
+        ]
+      }
+    },
+    "fromFirst": {
+      "title": "De la primera llamada al despliegue total — te acompañamos en todo",
+      "items": [
+        {
+          "title": "Conoceremos tu planta",
+          "description": "Agenda una llamada breve para entender tus procesos, desafíos y la estructura de tu equipo. Te mostraremos cómo Tractian encaja en tu día a día y dónde verás los beneficios y el ROI más rápidos."
+        },
+        {
+          "title": "Haremos una demo a tu medida",
+          "description": "Invita a tus principales stakeholders a una demo práctica alineada con tus prioridades. Compartiremos casos relevantes de operaciones similares y mostraremos exactamente cómo tu equipo puede beneficiarse."
+        },
+        {
+          "title": "Construiremos un caso de negocio y un análisis de ROI",
+          "description": "Delinearemos proyecciones de ROI y justificación de costos según tus objetivos. Mientras tanto, nuestros ingenieros asegurarán conectividad, seguridad e integración sin fricción con tus sistemas actuales."
+        },
+        {
+          "title": "Implementaremos, capacitaremos y pondremos en marcha",
+          "description": "Nuestros ingenieros desplegarán Tractian con soporte premium, capacitación en campo y sin interrupciones de la operación. Desde el primer día, comenzarás a medir valor y escalar la adopción sin fricción."
+        }
+      ]
+    },
+    "moreThanMachines": {
+      "title": "Más que Máquinas.\nSe Trata de Personas.",
+      "cta": "Elegir Tractian"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "",
+      "items": [
+        {
+          "q": "¿Cómo puedo reducir el downtime no planificado en mi planta?",
+          "a": "El monitoreo de condición de Tractian detecta fallas en etapa temprana y envía alertas antes de que ocurran averías — dándote tiempo para actuar. Combinado con nuestro CMMS, esas alertas generan automáticamente órdenes de trabajo, asignan tareas y dan seguimiento al progreso, para que nada se pierda. Previenes fallas y te mantienes organizado al mismo tiempo."
+        },
+        {
+          "q": "¿Puedo demostrar el ROI usando Tractian?",
+          "a": "Tractian está hecho para activos industriales — desde motores y bombas hasta compresores, reductores y más. Si se mueve, vibra o se calienta, podemos ayudarte a monitorearlo."
+        },
+        {
+          "q": "¿Qué tan difícil es instalar y comenzar a usar Tractian?",
+          "a": "Es plug-and-play. Los sensores de vibración se instalan en minutos y la plataforma es intuitiva — sin onboarding complejo ni capacitaciones largas. La mayoría de los equipos está operando en un día."
+        },
+        {
+          "q": "¿Tractian realmente ayuda si mi equipo está corto de personal?",
+          "a": "Sí. Nuestro monitoreo de condición identifica los problemas, mientras que el CMMS los convierte en tareas claras y accionables. Juntos, eliminan el tiempo perdido buscando datos, adivinando prioridades o persiguiendo papeleo. Obtienes alertas directas, programación inteligente y visibilidad total para actuar rápido — incluso con menos manos."
+        },
+        {
+          "q": "¿Necesito reemplazar mis sistemas actuales para usar Tractian?",
+          "a": "No. Tractian está diseñado para trabajar junto con tus herramientas actuales, incluyendo ERPs, sistemas de mantenimiento y hojas de cálculo. Puedes empezar donde estás y escalar sin interrupciones."
+        },
+        {
+          "q": "¿Cómo apoya Tractian el cumplimiento y la preparación para auditorías?",
+          "a": "Tractian integra el cumplimiento en el mantenimiento diario. Registra validaciones de seguridad, permisos de trabajo, POE y el historial en un solo lugar — para que puedas exportar reportes al instante y demostrar diligencia durante auditorías o inspecciones."
+        },
+        {
+          "q": "¿Qué tipo de reportes ofrece Tractian?",
+          "a": "Tractian ofrece insights listos para la dirección, incluyendo costos de mantenimiento, backlog, tasas de ejecución, salud de activos y productividad laboral. Los reportes se pueden personalizar por área, periodo o tipo de activo — y exportarse para planificación o presentaciones."
+        },
+        {
+          "q": "¿Tractian es fácil de usar para técnicos?",
+          "a": "Sí. Tractian es mobile-first y está hecho para el campo. Tareas, checklists y diagnósticos están disponibles en pocos toques — ayudando a tu equipo a ejecutar órdenes de trabajo, validar correcciones y mantenerse productivo sin administración extra."
+        },
+        {
+          "q": "¿Qué tipo de soporte incluye Tractian?",
+          "a": "Tendrás soporte completo de onboarding, un account manager dedicado y acceso total a nuestro equipo de ingeniería certificado CAT. Ya sea capacitación, integración o estrategia, estamos contigo en cada paso."
+        },
+        {
+          "q": "¿Puedo usar Tractian en múltiples sitios?",
+          "a": "Absolutamente. Tractian soporta visibilidad multisitio de fábrica. Puedes monitorear el desempeño entre instalaciones, comparar resultados y estandarizar procesos a escala."
+        },
+        {
+          "q": "¿Con qué tipos de máquinas o equipos trabaja Tractian?",
+          "a": "Tractian está diseñado para soportar una amplia gama de equipos críticos — desde motores y bombas hasta compresores y otros activos industriales — ya sean modernos o antiguos."
+        },
+        {
+          "q": "¿Tractian requiere Wi-Fi o redes internas?",
+          "a": "Los sensores de Tractian usan conectividad independiente, por lo que no se necesita acceso a redes internas ni configuraciones complejas de TI. Tus datos se sincronizan automáticamente con nuestra plataforma segura en la nube. Puedes acceder al software desde cualquier computadora con internet o usar la app móvil — incluso sin conexión — directamente desde el piso de planta."
+        },
+        {
+          "q": "¿Tractian puede ayudar a estandarizar procesos entre equipos?",
+          "a": "Tractian ofrece insights listos para la dirección, incluyendo costos de mantenimiento, backlog, tasas de ejecución, salud de activos y productividad laboral. Los reportes se pueden personalizar por área, periodo o tipo de activo — y exportarse para planificación o presentaciones."
+        },
+        {
+          "q": "¿Puedo migrar mis datos de mantenimiento existentes?",
+          "a": "Sí. Ofrecemos herramientas de migración sencillas y soporte práctico para traer tus registros históricos desde Excel, ERP, CMMS u otros sistemas. No perderás tus datos heredados."
+        },
+        {
+          "q": "¿Tractian se integra con mis herramientas actuales?",
+          "a": "Sí. Ofrecemos integraciones con ERPs y soportamos flujos de trabajo personalizados mediante nuestra API abierta. También brindamos migración gratuita desde tu CMMS actual, además de herramientas fáciles de usar para importar datos desde Excel u otros formatos."
+        },
+        {
+          "q": "¿Tractian es seguro?",
+          "a": "Sí. Tractian cumple con estándares clave de seguridad y calidad, incluidos SOC 2, ISO 27001 e ISO 9001. Nuestra plataforma soporta Single Sign-On (SSO), autenticación multifactor (MFA) y controles de acceso granulares basados en roles para garantizar que los datos estén protegidos y solo accesibles por usuarios autorizados. Todos los datos están cifrados en tránsito y en reposo. Visita nuestra página del Trust Center para más información."
+        },
+        {
+          "q": "¿Cuánto cuesta Tractian?",
+          "a": "En nuestro plan Bundled, que combina Sensores de Monitoreo de Condición y Software de Gestión de Mantenimiento, el precio depende del tamaño y la complejidad de tu operación. Trabajaremos contigo para crear una cotización personalizada según tus necesidades, sin costos ocultos. Todo lo que necesitas está incluido en un paquete simple e integrado."
+        }
+      ]
+    },
+    "footer": {
+      "columns": {
+        "condition": {
+          "title": "Monitoreo de Condición Tractian",
+          "l1": "Sensor de Vibración y Análisis",
+          "l2": "Detección de Fallas con IA",
+          "l3": "Confiabilidad y Análisis de Causa Raíz",
+          "l4": "Prevención de Downtime e Informes",
+          "l5": "Especificaciones del Sensor"
+        },
+        "cmms": {
+          "title": "CMMS Tractian",
+          "l1": "Troubleshooting y POE",
+          "l2": "Gestión de Órdenes de Trabajo",
+          "l3": "Gestión de Inventario de Repuestos",
+          "l4": "Mantenimiento Preventivo",
+          "l5": "Aplicación Móvil"
+        },
+        "integrations": {
+          "title": "Integraciones",
+          "l1": "Oracle NetSuite",
+          "l2": "SAP",
+          "l3": "Power BI",
+          "l4": "Todas las Integraciones",
+          "resourcesTitle": "Recursos",
+          "r1": "Casos de Éxito",
+          "r2": "Ebooks",
+          "r3": "Blog",
+          "r4": "POE",
+          "r5": "Actualizaciones del Producto",
+          "r6": "Tractian Academy",
+          "r7": "Centro de Ayuda",
+          "r8": "Calculadoras de Mantenimiento"
+        },
+        "support": {
+          "title": "Soporte",
+          "l1": "Sobre Nosotros",
+          "l2": "Referidos",
+          "l3": "Carreras",
+          "l4": "Sala de Prensa",
+          "l5": "Garantía de hardware",
+          "l6": "SLA de Software Alojado",
+          "l7": "Trust Center",
+          "downloadTitle": "Descarga Nuestra App",
+          "d1": "Apple Store",
+          "d2": "Google Play Store",
+          "d3": "SAP Store"
+        }
+      },
+      "bottom": {
+        "privacyChoices": "Tus Opciones de Privacidad",
+        "rights": "© 2025 Tractian Technologies Inc. Todos los derechos reservados.",
+        "phone": "+1 (833) GET-TRAC",
+        "address": "201 17th Street NW, Atlanta, GA 30363"
+      }
+    },
+    "header": {
+      "pricing": {
+        "conditionMonitoring": "Monitoreo de Condición",
+        "cmmsSoftware": "Software CMMS"
+      },
+      "company": {
+        "sections": {
+          "about": "Sobre Tractian",
+          "others": "Otros"
+        },
+        "cards": {
+          "aboutUs": "Sobre Nosotros",
+          "careers": "Carreras",
+          "newsroom": "Sala de Prensa"
+        },
+        "links": {
+          "contactUs": "Contáctanos",
+          "referrals": "Referidos",
+          "trustCenter": "Trust Center"
+        },
+        "alts": {
+          "aboutCard": "Sobre Tractian",
+          "careersCard": "Carreras",
+          "newsroomCard": "Sala de Prensa",
+          "contactIcon": "Icono de contacto",
+          "referralsIcon": "Icono de referidos",
+          "trustIcon": "Icono de Trust Center"
+        }
+      },
+      "resources": {
+        "sections": {
+          "resourcesCenter": "Centro de Recursos",
+          "customerHub": "Centro del Cliente"
+        },
+        "items": {
+          "caseStudies": "Casos de Éxito",
+          "ebooks": "Ebooks",
+          "blog": "Blog",
+          "templates": "Plantillas",
+          "calculators": "Calculadoras",
+          "eventsWebinars": "Eventos y Webinars",
+          "sops": "POE",
+          "chatgptPlugins": "Plugins de ChatGPT",
+          "productUpdates": "Actualizaciones del Producto",
+          "academy": "Tractian Academy",
+          "helpCenter": "Centro de Ayuda"
+        },
+        "alts": {
+          "caseStudiesIcon": "Icono de casos de éxito",
+          "ebooksIcon": "Icono de ebooks",
+          "blogIcon": "Icono de blog",
+          "templatesIcon": "Icono de plantillas",
+          "calculatorsIcon": "Icono de calculadoras",
+          "eventsWebinarsIcon": "Icono de eventos y webinars",
+          "sopsIcon": "Icono de POE",
+          "chatgptPluginsIcon": "Icono de plugins de ChatGPT",
+          "productUpdatesIcon": "Icono de actualizaciones del producto",
+          "academyIcon": "Icono de Tractian Academy",
+          "helpCenterIcon": "Icono del centro de ayuda"
+        }
+      },
+      "whoWeServe": {
+        "sections": {
+          "byRole": "Por Rol",
+          "bySector": "Por Sector"
+        },
+        "roles": {
+          "plantManager": "Gerente de Planta",
+          "reliabilityEngineer": "Ingeniero de Confiabilidad",
+          "maintenanceEngineer": "Ingeniero de Mantenimiento",
+          "manufacturingEngineer": "Ingeniero de Manufactura"
+        },
+        "sectors": {
+          "automotiveParts": "Automotriz y Autopartes",
+          "fleet": "Flotas",
+          "manufacturing": "Manufactura",
+          "oilGas": "Petróleo y Gas",
+          "chemicals": "Químicos",
+          "foodBeverage": "Alimentos y Bebidas",
+          "millsAgriculture": "Molinos y Agricultura",
+          "facilities": "Instalaciones",
+          "heavyEquipment": "Equipos Pesados",
+          "miningMetals": "Minería y Metales"
+        }
+      },
+      "solutions": {
+        "columns": {
+          "condition": {
+            "title": "Monitoreo de Condición Tractian",
+            "items": {
+              "vibration": {
+                "title": "Sensor de Vibración y Análisis",
+                "desc": "Todas las herramientas que necesitas para monitorear remotamente la salud de las máquinas."
+              },
+              "aiFailure": {
+                "title": "Detección de Fallas con IA",
+                "desc": "Detecta problemas temprano y activa alertas automáticas."
+              },
+              "reliability": {
+                "title": "Confiabilidad y Análisis de Causa Raíz",
+                "desc": "Llega al “por qué” más rápido y construye tu programa de confiabilidad."
+              },
+              "downtime": {
+                "title": "Prevención de Downtime e Informes",
+                "desc": "Descubre tendencias de falla y actúa antes de que ocurran averías."
+              },
+              "sensorSpecs": {
+                "title": "Especificaciones del Sensor",
+                "desc": "Monitorea vibración, temperatura, runtime y RPM en tiempo real."
+              }
+            }
+          },
+          "cmms": {
+            "title": "CMMS Tractian",
+            "items": {
+              "troubleshooting": {
+                "title": "Troubleshooting y POE",
+                "desc": "Guía a los técnicos con POE y checklists inteligentes."
+              },
+              "workOrders": {
+                "title": "Gestión de Órdenes de Trabajo",
+                "desc": "Planifica, asigna y da seguimiento a cada orden de trabajo en un solo lugar."
+              },
+              "partsInventory": {
+                "title": "Gestión de Inventario de Repuestos",
+                "desc": "Monitorea repuestos críticos y vincúlalos a tareas de mantenimiento."
+              },
+              "preventive": {
+                "title": "Mantenimiento Preventivo",
+                "desc": "Automatiza tareas, evita fallas y reduce el downtime."
+              },
+              "integrations": {
+                "title": "Integraciones",
+                "desc": "Conecta Tractian con ERPs, sensores y sistemas de datos."
+              }
+            }
+          },
+          "oee": {
+            "title": "OEE Tractian",
+            "items": {
+              "production": {
+                "title": "Seguimiento de Producción con IA",
+                "desc": "Obtén el estado de producción, líneas y estaciones con insights en vivo."
+              },
+              "operator": {
+                "title": "Desempeño de Operadores",
+                "desc": "Conecta y empodera a la primera línea."
+              },
+              "quality": {
+                "title": "Calidad Digitalizada",
+                "desc": "Digitaliza formularios y mediciones de calidad."
+              },
+              "dashboards": {
+                "title": "Dashboards Personalizados",
+                "desc": "Gestiona la operación con reportes de datos en tiempo real."
+              },
+              "utility": {
+                "title": "Analítica de Utilidades y Procesos",
+                "desc": "Analiza el consumo de energía y métricas de proceso."
+              }
+            }
+          }
+        }
+      }
+    },
+    "form": {
+      "title": "Habla con un especialista",
+      "subtitle": "Completa el formulario y nos pondremos en contacto contigo.",
+      "placeholder": "El formulario se implementará como un componente client en el siguiente paso."
+    }
   }
 }
