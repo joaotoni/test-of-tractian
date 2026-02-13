@@ -183,8 +183,8 @@ export default function Header({ lang }: { lang: string }) {
         <header ref={headerRef} className="w-full border-b border-slate-200/70 bg-[#F6F8FB]">
           <div className="mx-auto flex h-16 max-w-310 items-center justify-between px-4 md:px-6">
             <Link href={`/${lang}`} className="flex items-center" onClick={closeAll}>
-  <TractianLogo className="h-6 w-auto text-blue-600" />
-</Link>
+              <TractianLogo className="h-6 w-auto text-blue-600" />
+            </Link>
             <nav className="hidden items-center gap-8 lg:flex">
               {nav.map((item) => {
                 const active = megaOpen === item.key;
