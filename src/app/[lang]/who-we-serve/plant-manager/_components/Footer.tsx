@@ -1,0 +1,292 @@
+'use client';
+
+import Link from 'next/link';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+
+function FooterTitle({ children }: { children: React.ReactNode }) {
+  return (
+    <h3 className="text-[14px] font-bold  text-slate-500">
+      {children}
+    </h3>
+  );
+}
+
+function FooterLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <Link
+      href={href}
+      className="block text-[14px] leading-6 text-slate-500 hover:underline transition-colors"
+    >
+      {children}
+    </Link>
+  );
+}
+
+export default function Footer() {
+  const t = useTranslations('plantManager.footer');
+
+  return (
+    <footer className="bg-slate-100">
+      <div className="mx-auto w-full max-w-6xl px-6">
+        <div className="flex flex-col gap-6 py-10 md:flex-row md:items-center md:justify-between">
+          <Link href="/" className="lg:inline-flex items-center hidden">
+            <Image
+              src="/tractian.svg"
+              alt="Tractian"
+              width={150}
+              height={32}
+              priority={false}
+            />
+          </Link>
+
+          <div className="flex flex-wrap items-center gap-3 md:justify-end">
+            <Image src="/img/front-runners-img.png" alt="Badge" width={52} height={52} />
+            <Image src="/img/forbes-ai-img.png" alt="Badge" width={52} height={52} />
+            <Image src="/img/aicpa-soc-img.png" alt="Badge" width={52} height={52} />
+            <Image src="/img/sap-partner-img.png" alt="Badge" width={52} height={52} />
+            <Image src="/img/BadgeISO27001-img.png" alt="Badge" width={52} height={52} />
+            <Image src="/img/oracle-cloud-img.png" alt="Badge" width={52} height={52} />
+            <Image src="/img/iso-9001-img.png" alt="Badge" width={52} height={52} />
+            <Image src="/img/asset-management-best-meets-requirements-img.png" alt="Badge" width={52} height={52} />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 pb-10 md:grid-cols-2 md:gap-10 lg:grid-cols-4">
+          <div className="pt-4 space-y-3 lg:pt-8">
+            <FooterTitle>{t('columns.condition.title')}</FooterTitle>
+            <div className="space-y-1 border-b border-slate-300 md:border-b-0 pb-8 lg:pb-0">
+              <FooterLink href="/en/condition-monitoring/vibration-sensor">
+                {t('columns.condition.l1')}
+              </FooterLink>
+              <FooterLink href="/en/condition-monitoring/ai-failure-detection">
+                {t('columns.condition.l2')}
+              </FooterLink>
+              <FooterLink href="/en/condition-monitoring/reliability">
+                {t('columns.condition.l3')}
+              </FooterLink>
+              <FooterLink href="/en/condition-monitoring/downtime-prevention">
+                {t('columns.condition.l4')}
+              </FooterLink>
+              <FooterLink href="/en/condition-monitoring/sensor-specifications">
+                {t('columns.condition.l5')}
+              </FooterLink>
+            </div>
+
+            <div className="pt-4 space-y-3 lg:pt-8">
+              <FooterTitle>Tractian OEE</FooterTitle>
+              <div className="space-y-1 border-b border-slate-300 md:border-b-0 pb-8 lg:pb-0">
+                <FooterLink href="/en/oee/ai-production-tracking">AI Production Tracking</FooterLink>
+                <FooterLink href="/en/oee/operator-performance">Operator Performance</FooterLink>
+                <FooterLink href="/en/oee/digitized-quality">Digitized Quality</FooterLink>
+                <FooterLink href="/en/oee/custom-dashboards">Custom Dashboards</FooterLink>
+                <FooterLink href="/en/oee/utility-process-analytics">Utility &amp; Process Analytics</FooterLink>
+              </div>
+            </div>
+          </div>
+
+          <div className="pt-4 space-y-3 lg:pt-8">
+            <FooterTitle>{t('columns.cmms.title')}</FooterTitle>
+            <div className="space-y-1 border-b border-slate-300 md:border-b-0 pb-8 lg:pb-0">
+              <FooterLink href="/en/cmms/troubleshooting-sops">{t('columns.cmms.l1')}</FooterLink>
+              <FooterLink href="/en/cmms/work-orders">{t('columns.cmms.l2')}</FooterLink>
+              <FooterLink href="/en/cmms/parts-inventory">{t('columns.cmms.l3')}</FooterLink>
+              <FooterLink href="/en/cmms/preventive-maintenance">{t('columns.cmms.l4')}</FooterLink>
+              <FooterLink href="/en/cmms/mobile-app">{t('columns.cmms.l5')}</FooterLink>
+            </div>
+
+            <div className="pt-4 space-y-3 lg:pt-8">
+              <FooterTitle>Pricing</FooterTitle>
+              <div className="space-y-1 border-b border-slate-300 md:border-b-0 pb-8 lg:pb-0">
+                <FooterLink href="/en/pricing/condition-monitoring">Condition Monitoring</FooterLink>
+                <FooterLink href="/en/pricing/cmms">CMMS Software</FooterLink>
+                <FooterLink href="/en/pricing/oee">OEE Platform</FooterLink>
+              </div>
+            </div>
+          </div>
+
+          <div className="pt-4 space-y-3 lg:pt-8">
+            <FooterTitle>{t('columns.integrations.title')}</FooterTitle>
+            <div className="space-y-1 border-b border-slate-300 md:border-b-0 pb-8 lg:pb-0">
+              <FooterLink href="/en/integrations/netsuite">{t('columns.integrations.l1')}</FooterLink>
+              <FooterLink href="/en/integrations/sap">{t('columns.integrations.l2')}</FooterLink>
+              <FooterLink href="/en/integrations/power-bi">{t('columns.integrations.l3')}</FooterLink>
+              <FooterLink href="/en/integrations">{t('columns.integrations.l4')}</FooterLink>
+            </div>
+
+            <div className="pt-4 space-y-3 lg:pt-8">
+              <FooterTitle>{t('columns.integrations.resourcesTitle')}</FooterTitle>
+              <div className="space-y-1 border-b border-slate-300 md:border-b-0 pb-8 lg:pb-0">
+                <FooterLink href="/en/resources/case-studies">{t('columns.integrations.r1')}</FooterLink>
+                <FooterLink href="/en/resources/ebooks">{t('columns.integrations.r2')}</FooterLink>
+                <FooterLink href="/en/blog">{t('columns.integrations.r3')}</FooterLink>
+                <FooterLink href="/en/resources/sops">{t('columns.integrations.r4')}</FooterLink>
+                <FooterLink href="/en/resources/product-updates">{t('columns.integrations.r5')}</FooterLink>
+                <FooterLink href="/en/resources/academy">{t('columns.integrations.r6')}</FooterLink>
+                <FooterLink href="/en/help-center">{t('columns.integrations.r7')}</FooterLink>
+                <FooterLink href="/en/resources/maintenance-calculators">{t('columns.integrations.r8')}</FooterLink>
+              </div>
+            </div>
+          </div>
+
+          <div className="pt-4 space-y-3 lg:pt-8">
+            <FooterTitle>{t('columns.support.title')}</FooterTitle>
+            <div className="space-y-1 border-b border-slate-300 md:border-b-0 pb-8 lg:pb-0">
+              <FooterLink href="/en/about">{t('columns.support.l1')}</FooterLink>
+              <FooterLink href="/en/referrals">{t('columns.support.l2')}</FooterLink>
+              <FooterLink href="/en/careers">{t('columns.support.l3')}</FooterLink>
+              <FooterLink href="/en/newsroom">{t('columns.support.l4')}</FooterLink>
+              <FooterLink href="/en/hardware-warranty">{t('columns.support.l5')}</FooterLink>
+              <FooterLink href="/en/hosted-software-sla">{t('columns.support.l6')}</FooterLink>
+              <FooterLink href="/en/trust-center">{t('columns.support.l7')}</FooterLink>
+            </div>
+
+            <div className="pt-4 space-y-3 lg:pt-8">
+              <FooterTitle>{t('columns.support.downloadTitle')}</FooterTitle>
+              <div className="space-y-1 text-slate-500">
+                <FooterLink href="https://apps.apple.com/" >{t('columns.support.d1')}</FooterLink>
+                <FooterLink href="https://play.google.com/" >{t('columns.support.d2')}</FooterLink>
+                <FooterLink href="https://store.sap.com/" >{t('columns.support.d3')}</FooterLink>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 py-6 md:flex-row md:items-center md:justify-between">
+          <div className="space-y-2 text-[12px] text-slate-400">
+            <button
+              type="button"
+              className="inline-flex items-center gap-2 transition-colors"
+            >
+              <Image
+                src="/icons/privacy-choices.svg"
+                alt="Privacy Choices"
+                width={18}
+                height={18}
+                className="opacity-60 hover:opacity-100 transition"
+              />
+              {t('bottom.privacyChoices')}
+            </button>
+
+            <div>{t('bottom.rights')}</div>
+          </div>
+
+          <div className="flex flex-col items-start gap-2 md:items-end">
+            <div className="flex items-center gap-4 text-slate-400">
+              <Link className="hover:brightness-110" href="https://www.linkedin.com/company/get-tractian/" aria-label="LinkedIn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  className="h-4 w-4"
+                  fill="none"
+                >
+                  <path
+                    d="M4.90689 19.3237C4.90814 19.6962 4.60689 19.9994 4.23439 20C4.23439 20 4.23314 20 4.23252 20H1.35752C0.985019 20.0012 0.681894 19.7 0.681269 19.3275C0.681269 19.3262 0.681269 19.325 0.681269 19.3237V7.2725C0.681269 6.89875 0.984394 6.59625 1.35752 6.59625H4.23189C4.60502 6.5975 4.90627 6.9 4.90627 7.2725V19.3231L4.90689 19.3237ZM2.79439 5.45437C1.28814 5.45437 0.0668945 4.23375 0.0668945 2.7275C0.0668945 1.22125 1.28814 0 2.79439 0C4.30064 0 5.52189 1.22125 5.52189 2.7275C5.52189 4.23375 4.30064 5.455 2.79439 5.455V5.45437ZM19.9325 19.3706C19.9338 19.7131 19.6569 19.9912 19.3144 19.9925C19.3131 19.9925 19.3119 19.9925 19.3106 19.9925H16.22C15.8775 19.9937 15.5994 19.7169 15.5981 19.3744C15.5981 19.3731 15.5981 19.3719 15.5981 19.3706V13.725C15.5981 12.8812 15.8456 10.0306 13.3925 10.0306C11.4925 10.0306 11.105 11.9812 11.0288 12.8581V19.3781C11.0288 19.7181 10.7556 19.995 10.4163 20H7.43064C7.08814 20 6.81064 19.7225 6.81064 19.38V7.22C6.80939 6.8775 7.08627 6.59937 7.42877 6.59812H10.4163C10.7594 6.59812 11.0381 6.87625 11.0381 7.22V8.27062C11.7438 7.21062 12.7888 6.39625 15.02 6.39625C19.9619 6.39625 19.9294 11.0106 19.9294 13.5456L19.9331 19.3712L19.9325 19.3706Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </Link>
+              <Link className="hover:brightness-110" href="https://www.facebook.com/get.tractian/" aria-label="Facebook">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  className="h-4 w-4"
+                  fill="none"
+                >
+                  <path
+                    d="M14.2844 10.0081H11.481V20H7.32737V10.0081H5.35254V6.47641H7.32737V4.19196C7.32737 2.55637 8.10478 0 11.5193 0L14.5973 0.0121155V3.44013H12.3634C11.9999 3.44013 11.4823 3.62186 11.4823 4.40197V6.47708H14.6471L14.2844 10.0081Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </Link>
+              <Link className="hover:brightness-110" href="https://www.instagram.com/get.tractian/" aria-label="Instagram">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  className="h-4 w-4"
+                  fill="none"
+                >
+                  <path
+                    d="M15.1807 3.91566C15.6801 3.91566 16.0843 4.31988 16.0843 4.81928C16.0843 5.31868 15.6801 5.72289 15.1807 5.72289C14.6813 5.72289 14.2771 5.31868 14.2771 4.81928C14.2771 4.31988 14.6813 3.91566 15.1807 3.91566ZM14.5181 10C14.5181 12.4916 12.4916 14.5181 10 14.5181C7.50843 14.5181 5.48193 12.4916 5.48193 10C5.48193 7.50843 7.50843 5.48193 10 5.48193C12.4916 5.48193 14.5181 7.50843 14.5181 10ZM12.7108 10C12.7108 8.50301 11.497 7.28916 10 7.28916C8.50301 7.28916 7.28916 8.50301 7.28916 10C7.28916 11.497 8.50301 12.7108 10 12.7108C11.497 12.7108 12.7108 11.497 12.7108 10ZM14.5783 0C17.5675 0 20 2.43253 20 5.42169V14.5783C20 17.5675 17.5675 20 14.5783 20H5.42169C2.43253 20 0 17.5675 0 14.5783V5.42169C0 2.43253 2.43253 0 5.42169 0H14.5783ZM14.5783 1.80723H5.42169C3.42831 1.80723 1.80723 3.42831 1.80723 5.42169V14.5783C1.80723 16.5717 3.42831 18.1928 5.42169 18.1928H14.5783C16.5717 18.1928 18.1928 16.5717 18.1928 14.5783V5.42169C18.1928 3.42831 16.5717 1.80723 14.5783 1.80723Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </Link>
+              <Link className="hover:brightness-110" href="https://www.youtube.com/channel/UCmrRZOCxvMbDnR5haGfFe8w" aria-label="YouTube">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  className="h-4 w-4"
+                  fill="none"
+                >
+                  <path
+                    d="M19.7213 5.23495C19.6163 4.35943 18.7911 3.51955 17.9273 3.40676C12.662 2.75244 7.33706 2.75244 2.0732 3.40676C1.20891 3.51907 0.383681 4.35894 0.278697 5.23495C-0.0928989 8.44454 -0.0928989 11.5565 0.278697 14.7656C0.383681 15.6411 1.20891 16.4819 2.0732 16.5938C7.33706 17.2481 12.662 17.2481 17.9273 16.5938C18.7906 16.4824 19.6163 15.6416 19.7213 14.7656C20.0929 11.557 20.0929 8.44454 19.7213 5.23495ZM8.33319 12.7377V7.26383C8.33319 7.00894 8.61738 6.85659 8.8293 6.9982L12.9349 9.73511C13.1244 9.86158 13.1244 10.1399 12.9349 10.2664L8.8293 13.0033C8.61738 13.1449 8.33319 12.9926 8.33319 12.7377Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </Link>
+              <Link className="hover:brightness-110" href="https://x.com/tractian" aria-label="X">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 26 25"
+                  className="h-4 w-4"
+                  fill="none"
+                >
+                  <g clipPath="url(#clip0)">
+                    <path
+                      d="M14.9475 10.587L24.2481 0H22.045L13.9659 9.19067L7.5179 0H0.0791016L9.83181 13.8993L0.0791016 25H2.28227L10.8085 15.2923L17.6195 25H25.0583M3.07744 1.62698H6.46212L22.0433 23.453H18.6578"
+                      fill="currentColor"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect width="24.9792" height="25" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </Link>
+              <Link
+                href="tel:+18334388722"
+                aria-label="Phone"
+                className="text-slate-400 hover:text-slate-700 transition"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  className="h-4 w-4"
+                  strokeWidth={1.5}
+                  fill="none"
+                >
+                  <path
+                    d="M19.64 21.25c-2.54 2.55-8.38.83-13-3.84S.2 6.9 2.75 4.36l2.78-2.79 5.37 5.37-2 2a2.18 2.18 0 0 0 0 3.06l3.1 3.1a2.18 2.18 0 0 0 3.07 0l2-2 5.37 5.37Z"
+                    stroke="currentColor"
+                    strokeMiterlimit={10}
+                  />
+                </svg>
+              </Link>
+
+              <Link className="hover:underline text-slate-400" href="tel:+18334388722">
+                {t('bottom.phone')}
+              </Link>
+            </div>
+
+            <a
+              href="https://maps.app.goo.gl/DTDjgu4zXJrxbfWT9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[14px] text-slate-400 hover:underline"
+            >
+              {t('bottom.address')}
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

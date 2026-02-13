@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-carousel {
+  animation: carousel 25s linear infinite;
+  will-change: transform;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; 
+}
