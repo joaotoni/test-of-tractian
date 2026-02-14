@@ -1,7 +1,9 @@
-import { getTranslations } from 'next-intl/server';
+'use client';
 
-export default async function MoreThanMachines() {
-  const t = await getTranslations('plantManager.moreThanMachines');
+import { useTranslations } from 'next-intl';
+
+export default function MoreThanMachines() {
+  const t = useTranslations('plantManager.moreThanMachines');
 
   return (
     <section className="w-full">
@@ -28,18 +30,18 @@ export default async function MoreThanMachines() {
                 </h2>
 
                 <div className="mt-8 flex justify-center lg:justify-start">
-                  <a
-                    href="#lead-form"
+                  <button
+                    type="button"
+                    onClick={() => window.dispatchEvent(new CustomEvent('open-demo-modal'))}
                     className="inline-flex items-center justify-center rounded-sm bg-blue-600 px-7 py-3 text-sm font-semibold text-white hover:bg-blue-500"
                   >
                     {t('cta')}
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );

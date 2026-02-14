@@ -8,9 +8,14 @@ import Hero from './_components/Hero';
 import MoreThanMachines from './_components/MoreThanMachines';
 import PainPoints from './_components/PainPoints';
 import Testimonials from './_components/Testimonials';
+import DemoModal from './_components/DemoModal';
 
-export default async function PlantManagerPage({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = await params;
+export default async function PlantManagerPage({
+  params
+}: {
+  params: Promise<{lang: string}>;
+}) {
+  const {lang} = await params;
 
   return (
     <main className="min-h-screen">
@@ -24,6 +29,7 @@ export default async function PlantManagerPage({ params }: { params: Promise<{ l
       <MoreThanMachines />
       <FAQ />
       <Footer />
+      <DemoModal lang={lang} />
     </main>
   );
 }

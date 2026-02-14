@@ -60,14 +60,14 @@ export default function Footer() {
           </Link>
 
           <div className="flex flex-wrap items-center gap-3 md:justify-end">
-            <Image src="/img/front-runners-img.png" alt="Badge" width={52} height={52} />
-            <Image src="/img/forbes-ai-img.png" alt="Badge" width={52} height={52} />
-            <Image src="/img/aicpa-soc-img.png" alt="Badge" width={52} height={52} />
-            <Image src="/img/sap-partner-img.png" alt="Badge" width={52} height={52} />
-            <Image src="/img/BadgeISO27001-img.png" alt="Badge" width={52} height={52} />
-            <Image src="/img/oracle-cloud-img.png" alt="Badge" width={52} height={52} />
-            <Image src="/img/iso-9001-img.png" alt="Badge" width={52} height={52} />
-            <Image src="/img/asset-management-best-meets-requirements-img.png" alt="Badge" width={52} height={52} />
+            <Image src="/img/front-runners-img.png" alt="Badge" width={52} height={52} className='h-auto' />
+            <Image src="/img/forbes-ai-img.png" alt="Badge" width={52} height={52} className='h-auto'/>
+            <Image src="/img/aicpa-soc-img.png" alt="Badge" width={52} height={52} className='h-auto'/>
+            <Image src="/img/sap-partner-img.png" alt="Badge" width={52} height={52} className='h-auto'/>
+            <Image src="/img/BadgeISO27001-img.png" alt="Badge" width={52} height={52} className='h-auto'/>
+            <Image src="/img/oracle-cloud-img.png" alt="Badge" width={52} height={52} className='h-auto'/>
+            <Image src="/img/iso-9001-img.png" alt="Badge" width={52} height={52} className='h-auto'/>
+            <Image src="/img/asset-management-best-meets-requirements-img.png" alt="Badge" width={52} height={52} className='h-auto'/>
           </div>
         </div>
 

@@ -27,7 +27,7 @@ export default async function Testimonials() {
                   alt=""
                   width={26}
                   height={26}
-                  className="object-contain"
+                  className="object-contain h-auto"
                 />
               </div>
 
@@ -53,7 +53,7 @@ export default async function Testimonials() {
                   alt=""
                   width={48}
                   height={48}
-                  className="object-contain"
+                  className="object-contain h-auto"
                 />
               </div>
 

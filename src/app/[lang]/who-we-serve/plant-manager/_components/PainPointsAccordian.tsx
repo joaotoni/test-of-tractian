@@ -59,7 +59,6 @@ export default function PainPointsAccordion({
                 type="button"
                 onTouchStart={onTouchStart}
                 onTouchEnd={(e) => {
-                  // Marca para ignorar o click que vem depois do touch
                   ignoreClickRef.current = true;
                   setTimeout(() => (ignoreClickRef.current = false), 0);
 
@@ -67,7 +66,6 @@ export default function PainPointsAccordion({
                   toggle(idx);
                 }}
                 onClick={() => {
-                  // No mobile o click vem após o touchend — ignora para não "toggle" duas vezes
                   if (ignoreClickRef.current) return;
                   toggle(idx);
                 }}

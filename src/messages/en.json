@@ -315,6 +315,13 @@
       }
     },
     "header": {
+      "nav": {
+        "solutions": "Solutions",
+        "whoWeServe": "Who We Serve",
+        "resources": "Resources",
+        "company": "Company",
+        "pricing": "Pricing"
+      },
       "pricing": {
         "conditionMonitoring": "Condition Monitoring",
         "cmmsSoftware": "CMMS Software"
@@ -479,10 +486,54 @@
         }
       }
     },
-    "form": {
-      "title": "Talk to a specialist",
-      "subtitle": "Fill out the form and we'll contact you.",
-      "placeholder": "Form will be implemented as a client component in the next step."
+    "formModal": {
+      "title": "Request Your Demo",
+      "subtitle": "Fill in the fields to talk to a specialist and understand how our solutions can help your operation.",
+      "close": "Close",
+      "fields": {
+        "name": "Name",
+        "email": "Work Email",
+        "countryCode": "Country code",
+        "phone": "Phone",
+        "jobTitle": "Job Title",
+        "industry": "Industry Sector",
+        "solution": "Select the solution of most interest"
+      },
+      "jobTitles": {
+        "plantManager": "Plant Manager",
+        "maintenanceManager": "Maintenance Manager",
+        "reliabilityEngineer": "Reliability Engineer",
+        "operations": "Operations",
+        "other": "Other"
+      },
+      "industries": {
+        "manufacturing": "Manufacturing",
+        "foodBeverage": "Food & Beverage",
+        "automotive": "Automotive",
+        "oilGas": "Oil & Gas",
+        "other": "Other"
+      },
+      "solutions": {
+        "condition": "Condition Monitoring",
+        "cmms": "CMMS",
+        "oee": "OEE",
+        "bundle": "Bundle (Sensor + CMMS)"
+      },
+      "assets": {
+        "label": "How many assets run in your operation?",
+        "lt25": "Less than 25",
+        "25_49": "25 - 49",
+        "50_99": "50 - 99",
+        "100_249": "100 - 249",
+        "250p": "250+",
+        "na": "N/A"
+      },
+      "submit": "Request demo",
+      "success": {
+        "title": "Submitted!",
+        "desc": "We’ve received your information. In a real project, this would be sent to the backend/CRM.",
+        "close": "Close"
+      }
     }
   }
 }

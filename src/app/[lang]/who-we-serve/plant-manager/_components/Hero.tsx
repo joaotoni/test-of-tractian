@@ -1,8 +1,10 @@
-import Image from 'next/image';
-import { getTranslations } from 'next-intl/server';
+'use client';
 
-export default async function Hero() {
-  const t = await getTranslations('plantManager.hero');
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+
+export default function Hero() {
+  const t = useTranslations('plantManager.hero');
 
   return (
     <section className="w-full overflow-hidden">
@@ -35,8 +37,8 @@ export default async function Hero() {
             alt=""
             fill
             priority
-            sizes="100vw"
-            className="object-cover object-[92%_center]"
+            sizes="(max-width: 768px) 100vw, 100vw"
+            className="object-cover object-[92%_center] h-auto"
           />
         </div>
       </div>
@@ -52,8 +54,8 @@ export default async function Hero() {
           alt=""
           fill
           priority
-          sizes="100vw"
-          className="object-cover object-[75%_center] md:object-[80%_center] lg:object-[80%_20%]"
+          sizes="(max-width: 768px) 100vw, 100vw"
+          className="object-cover object-[75%_center] md:object-[80%_center] lg:object-[80%_20%] h-auto"
         />
 
         <div className="z-10 mx-auto grid w-full grid-cols-12">
@@ -71,13 +73,16 @@ export default async function Hero() {
                 </p>
 
                 <div className="pt-2">
-                  <a
-                    href="#lead-form"
+                  <button
+                    type="button"
+                    onClick={() => {
+                      window.dispatchEvent(new CustomEvent('open-demo-modal'));
+                    }}
                     className="inline-flex items-center gap-2 rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-500"
                   >
                     {t('ctaPrimary')}
                     <span aria-hidden>→</span>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -85,9 +90,7 @@ export default async function Hero() {
 
           <div className="col-span-12 hidden items-center justify-self-end lg:col-span-6 lg:flex lg:pr-12">
             <div className="w-75 rounded-md bg-white px-6 py-8 shadow-lg 2xl:w-85 3xl:w-[380px] 4xl:w-[420px]">
-              <p className="text-base leading-relaxed text-slate-500">
-                {t('quote.text')}
-              </p>
+              <p className="text-base leading-relaxed text-slate-500">{t('quote.text')}</p>
 
               <div className="mt-6">
                 <p className="text-base font-bold">{t('quote.name')}</p>

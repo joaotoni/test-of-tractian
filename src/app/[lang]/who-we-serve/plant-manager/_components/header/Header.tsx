@@ -1,8 +1,9 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import SolutionsMegaMenu from './mega/SolutionsMegaMenu';
 import WhoWeServeMegaMenu from './mega/WhoWeServeMegaMenu';
@@ -62,7 +63,6 @@ function TractianLogo({ className = '' }: { className?: string }) {
   );
 }
 
-
 export default function Header({ lang }: { lang: string }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState<NavKey | null>(null);
@@ -71,16 +71,15 @@ export default function Header({ lang }: { lang: string }) {
   const headerRef = useRef<HTMLElement | null>(null);
   const [overlayTop, setOverlayTop] = useState(0);
 
-  const nav: NavItem[] = useMemo(
-    () => [
-      { key: 'solutions', label: 'Solutions', href: `/${lang}/solutions`, hasDropdown: true },
-      { key: 'who', label: 'Who We Serve', href: `/${lang}/who-we-serve`, hasDropdown: true },
-      { key: 'resources', label: 'Resources', href: `/${lang}/resources`, hasDropdown: true },
-      { key: 'company', label: 'Company', href: `/${lang}/company`, hasDropdown: true },
-      { key: 'pricing', label: 'Pricing', href: `/${lang}/pricing`, hasDropdown: true },
-    ],
-    [lang]
-  );
+  const tNav = useTranslations('plantManager.header.nav');
+
+  const nav: NavItem[] = [
+    { key: 'solutions', label: tNav('solutions'), href: `/${lang}/solutions`, hasDropdown: true },
+    { key: 'who', label: tNav('whoWeServe'), href: `/${lang}/who-we-serve`, hasDropdown: true },
+    { key: 'resources', label: tNav('resources'), href: `/${lang}/resources`, hasDropdown: true },
+    { key: 'company', label: tNav('company'), href: `/${lang}/company`, hasDropdown: true },
+    { key: 'pricing', label: tNav('pricing'), href: `/${lang}/pricing`, hasDropdown: true },
+  ];
 
   const closeAll = () => {
     setMobileOpen(false);
@@ -241,13 +240,16 @@ export default function Header({ lang }: { lang: string }) {
               <Link href={`/${lang}/login`} onClick={closeAll} className="text-sm font-medium text-slate-700 hover:text-blue-600">
                 Login
               </Link>
-              <Link
-                href={`/${lang}/get-demo`}
-                onClick={closeAll}
+              <button
+                type="button"
+                onClick={() => {
+                  closeAll();
+                  window.dispatchEvent(new CustomEvent('open-demo-modal'));
+                }}
                 className="rounded-md border border-blue-600 px-4 py-2 text-sm font-semibold text-blue-600 hover:bg-blue-600 hover:text-white"
               >
                 Get Demo
-              </Link>
+              </button>
             </div>
             <button
               type="button"
@@ -303,7 +305,7 @@ export default function Header({ lang }: { lang: string }) {
         >
           <div className="flex items-center justify-between px-5 py-5">
             <Link href={`/${lang}`} className="flex items-center" onClick={closeAll}>
-              <Image src="/tractian-logo.svg" alt="Tractian" width={120} height={24} />
+              <TractianLogo className="h-6 w-auto text-blue-600" />
             </Link>
             <button
               type="button"
@@ -336,13 +338,16 @@ export default function Header({ lang }: { lang: string }) {
               >
                 Login
               </Link>
-              <Link
-                href={`/${lang}/get-demo`}
-                onClick={closeAll}
-                className="rounded-md bg-blue-600 px-5 py-3 text-center text-sm font-semibold text-white hover:bg-blue-700"
+              <button
+                type="button"
+                onClick={() => {
+                  closeAll();
+                  window.dispatchEvent(new CustomEvent('open-demo-modal'));
+                }}
+                className="rounded-md border border-blue-600 px-4 py-2 text-sm font-semibold text-blue-600 hover:bg-blue-600 hover:text-white"
               >
                 Get Demo
-              </Link>
+              </button>
             </div>
           </div>
         </aside>

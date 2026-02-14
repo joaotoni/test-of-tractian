@@ -1,38 +1,33 @@
 'use client';
 
-import { usePathname, useRouter } from 'next/navigation';
+import {useRouter, usePathname} from '@/i18n/routing';
 
 type Lang = 'en' | 'pt' | 'es';
 
 const LANGS: { code: Lang; label: string }[] = [
   { code: 'pt', label: 'Português (Brasil)' },
   { code: 'en', label: 'English (United States)' },
-  { code: 'es', label: 'Español (México)' },
+  { code: 'es', label: 'Español (México)' }
 ];
-
-function replaceLangInPath(pathname: string, nextLang: Lang) {
-  const parts = pathname.split('/').filter(Boolean);
-  if (parts.length === 0) return `/${nextLang}`;
-  parts[0] = nextLang;
-  return `/${parts.join('/')}`;
-}
 
 export default function LanguageSwitcher({
   lang,
   onSelect,
-  className = '',
+  className = ''
 }: {
   lang: string;
   onSelect?: () => void;
   className?: string;
 }) {
-  const current = (lang?.toLowerCase() as Lang) || 'en';
-  const pathname = usePathname();
   const router = useRouter();
+  const pathname = usePathname();
+
+  const current: Lang = lang === 'pt' || lang === 'en' || lang === 'es' ? lang : 'en';
 
   const handleSelect = (next: Lang) => {
-    const nextPath = replaceLangInPath(pathname || `/${current}`, next);
-    router.push(nextPath);
+    if (next === current) return;
+
+    router.push(pathname, {locale: next});
     onSelect?.();
   };
 
@@ -46,10 +41,8 @@ export default function LanguageSwitcher({
             type="button"
             onClick={() => handleSelect(l.code)}
             className={[
-              'w-full  px-3 py-2 text-left text-sm font-medium transition-colors',
-              active
-                ? 'bg-slate-300 text-slate-500'
-                : 'text-slate-500 hover:bg-slate-200',
+              'w-full px-3 py-2 text-left text-sm font-medium transition-colors',
+              active ? 'bg-slate-300 text-slate-500' : 'text-slate-500 hover:bg-slate-200'
             ].join(' ')}
           >
             {l.label}

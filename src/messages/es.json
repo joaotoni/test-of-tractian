@@ -315,6 +315,13 @@
       }
     },
     "header": {
+      "nav": {
+        "solutions": "Soluciones",
+        "whoWeServe": "Para quién es",
+        "resources": "Recursos",
+        "company": "Empresa",
+        "pricing": "Precios"
+      },
       "pricing": {
         "conditionMonitoring": "Monitoreo de Condición",
         "cmmsSoftware": "Software CMMS"
@@ -479,10 +486,54 @@
         }
       }
     },
-    "form": {
-      "title": "Habla con un especialista",
-      "subtitle": "Completa el formulario y nos pondremos en contacto contigo.",
-      "placeholder": "El formulario se implementará como un componente client en el siguiente paso."
+    "formModal": {
+      "title": "Solicita tu demo",
+      "subtitle": "Completa los campos para hablar con un especialista y entender cómo nuestras soluciones ayudan a tu operación.",
+      "close": "Cerrar",
+      "fields": {
+        "name": "Nombre",
+        "email": "Correo corporativo",
+        "countryCode": "Código del país",
+        "phone": "Teléfono",
+        "jobTitle": "Cargo",
+        "industry": "Sector",
+        "solution": "Selecciona la solución de mayor interés"
+      },
+      "jobTitles": {
+        "plantManager": "Gerente de Planta",
+        "maintenanceManager": "Gerente de Mantenimiento",
+        "reliabilityEngineer": "Ingeniero de Confiabilidad",
+        "operations": "Operaciones",
+        "other": "Otro"
+      },
+      "industries": {
+        "manufacturing": "Manufactura",
+        "foodBeverage": "Alimentos y Bebidas",
+        "automotive": "Automotriz",
+        "oilGas": "Petróleo y Gas",
+        "other": "Otro"
+      },
+      "solutions": {
+        "condition": "Monitoreo de Condición",
+        "cmms": "CMMS",
+        "oee": "OEE",
+        "bundle": "Paquete (Sensor + CMMS)"
+      },
+      "assets": {
+        "label": "¿Cuántos activos hay en tu operación?",
+        "lt25": "Menos de 25",
+        "25_49": "25 - 49",
+        "50_99": "50 - 99",
+        "100_249": "100 - 249",
+        "250p": "250+",
+        "na": "N/A"
+      },
+      "submit": "Solicitar demo",
+      "success": {
+        "title": "¡Enviado!",
+        "desc": "Hemos recibido tu información. En un proyecto real, esto se enviaría al backend/CRM.",
+        "close": "Cerrar"
+      }
     }
   }
 }
