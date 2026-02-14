@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 import SolutionsMegaMenu from './mega/SolutionsMegaMenu';
@@ -65,8 +64,11 @@ function TractianLogo({ className = '' }: { className?: string }) {
 
 export default function Header({ lang }: { lang: string }) {
   const [mobileOpen, setMobileOpen] = useState(false);
+
   const [megaOpen, setMegaOpen] = useState<NavKey | null>(null);
   const [langOpen, setLangOpen] = useState(false);
+
+  const [mobileSection, setMobileSection] = useState<NavKey | null>(null);
 
   const headerRef = useRef<HTMLElement | null>(null);
   const [overlayTop, setOverlayTop] = useState(0);
@@ -83,6 +85,7 @@ export default function Header({ lang }: { lang: string }) {
 
   const closeAll = () => {
     setMobileOpen(false);
+    setMobileSection(null);
     setMegaOpen(null);
     setLangOpen(false);
   };
@@ -113,6 +116,33 @@ export default function Header({ lang }: { lang: string }) {
     };
   }, [mobileOpen]);
 
+  const desktopOverlayOpen = !!megaOpen || langOpen;
+  useEffect(() => {
+    if (!desktopOverlayOpen) return;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [desktopOverlayOpen]);
+
+  useEffect(() => {
+    const measure = () => {
+      if (!headerRef.current) return;
+      setOverlayTop(headerRef.current.getBoundingClientRect().height);
+    };
+
+    measure();
+
+    const ro = new ResizeObserver(measure);
+    if (headerRef.current) ro.observe(headerRef.current);
+
+    window.addEventListener('resize', measure);
+    return () => {
+      window.removeEventListener('resize', measure);
+      ro.disconnect();
+    };
+  }, [lang]);
+
   const renderMega = () => {
     if (!megaOpen) return null;
 
@@ -133,34 +163,6 @@ export default function Header({ lang }: { lang: string }) {
         return null;
     }
   };
-
-  const desktopOverlayOpen = !!megaOpen || langOpen;
-
-  useEffect(() => {
-    const measure = () => {
-      if (!headerRef.current) return;
-      setOverlayTop(headerRef.current.getBoundingClientRect().height);
-    };
-
-    measure();
-
-    const ro = new ResizeObserver(measure);
-    if (headerRef.current) ro.observe(headerRef.current);
-
-    window.addEventListener('resize', measure);
-    return () => {
-      window.removeEventListener('resize', measure);
-      ro.disconnect();
-    };
-  }, [lang]);
-
-  useEffect(() => {
-    if (!desktopOverlayOpen) return;
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [desktopOverlayOpen]);
 
   const isFullWidthMega = megaOpen === 'solutions' || megaOpen === 'who';
 
@@ -257,6 +259,7 @@ export default function Header({ lang }: { lang: string }) {
               aria-expanded={mobileOpen}
               onClick={() => {
                 setMobileOpen(true);
+                setMobileSection(null);
                 setMegaOpen(null);
                 setLangOpen(false);
               }}
@@ -291,67 +294,83 @@ export default function Header({ lang }: { lang: string }) {
           {renderMega()}
         </div>
       </div>
-      <div className={['fixed inset-0 z-60 lg:hidden', mobileOpen ? 'pointer-events-auto' : 'pointer-events-none'].join(' ')}>
-        <div
-          onClick={() => setMobileOpen(false)}
-          className={['absolute inset-0 bg-black/30 transition-opacity', mobileOpen ? 'opacity-100' : 'opacity-0'].join(' ')}
-        />
-        <aside
-          className={[
-            'absolute right-0 top-0 h-full w-[86%] max-w-sm bg-white shadow-xl transition-transform',
-            mobileOpen ? 'translate-x-0' : 'translate-x-full',
-          ].join(' ')}
-          aria-label="Mobile menu"
-        >
-          <div className="flex items-center justify-between px-5 py-5">
-            <Link href={`/${lang}`} className="flex items-center" onClick={closeAll}>
-              <TractianLogo className="h-6 w-auto text-blue-600" />
-            </Link>
-            <button
-              type="button"
-              aria-label="Close menu"
-              onClick={() => setMobileOpen(false)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full hover:bg-slate-100"
-            >
-              <span className="text-2xl leading-none">&times;</span>
-            </button>
-          </div>
-          <div className="px-5 pb-6">
-            <div className="flex flex-col gap-1">
-              {nav.map((item) => (
-                <Link
-                  key={item.key}
-                  href={item.href}
-                  onClick={closeAll}
-                  className="rounded-xl px-3 py-3 text-base font-semibold hover:bg-slate-50"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-            <div className="mt-6 flex flex-col gap-3">
-              <LanguageSwitcher lang={lang} />
-              <Link
-                href="https://app.tractian.com/login"
-                onClick={closeAll}
-                className="rounded-md border border-slate-200 px-5 py-3 text-center text-sm font-semibold hover:bg-slate-50"
-              >
-                Login
+      {mobileOpen && (
+        <div className="fixed inset-0 z-80 lg:hidden">
+          <button
+            type="button"
+            aria-label="Close menu overlay"
+            onClick={closeAll}
+            className="absolute inset-0 bg-black/30"
+          />
+          <aside className="absolute inset-0 bg-white" aria-label="Mobile menu">
+            <div className="flex items-center justify-between border-b border-slate-200 px-4 py-4">
+              <Link href={`/${lang}`} className="flex items-center" onClick={closeAll}>
+                <TractianLogo className="h-6 w-auto text-blue-600" />
               </Link>
               <button
                 type="button"
-                onClick={() => {
-                  closeAll();
-                  window.dispatchEvent(new CustomEvent('open-demo-modal'));
-                }}
-                className="rounded-md border border-blue-600 px-4 py-2 text-sm font-semibold text-blue-600 hover:bg-blue-600 hover:text-white"
+                aria-label="Close menu"
+                onClick={closeAll}
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full hover:bg-slate-100"
               >
-                Get Demo
+                <span className="text-2xl leading-none">&times;</span>
               </button>
             </div>
-          </div>
-        </aside>
-      </div>
+            <div className="h-[calc(100vh-64px)] overflow-y-auto px-4 pb-6 pt-3">
+              <div className="space-y-1">
+                {nav.map((item) => {
+                  const open = mobileSection === item.key;
+                  return (
+                    <div key={item.key} className="rounded-md">
+                      <button
+                        type="button"
+                        onClick={() => setMobileSection((prev) => (prev === item.key ? null : item.key))}
+                        className="flex w-full items-center justify-between py-4 text-left text-base font-medium text-slate-700"
+                        aria-expanded={open}
+                      >
+                        <span>{item.label}</span>
+                        <ChevronDown className={['text-slate-500 transition-transform', open ? 'rotate-180' : ''].join(' ')} />
+                      </button>
+                      <div className={[open ? 'block' : 'hidden', 'pb-4'].join(' ')}>
+                        {item.key === 'solutions' && <SolutionsMegaMenu lang={lang} onNavigate={closeAll} variant="mobile" />}
+                        {item.key === 'who' && <WhoWeServeMegaMenu lang={lang} onNavigate={closeAll} variant="mobile" />}
+                        {item.key === 'resources' && <ResourcesMegaMenu lang={lang} onNavigate={closeAll} variant="mobile" />}
+                        {item.key === 'company' && <CompanyMegaMenu lang={lang} onNavigate={closeAll} variant="mobile" />}
+                        {item.key === 'pricing' && <PricingMegaMenu lang={lang} onNavigate={closeAll} variant="mobile" />}
+                      </div>
+
+                      <div className="h-px w-full bg-slate-200" />
+                    </div>
+                  );
+                })}
+              </div>
+              <div className="mt-3">
+                <LanguageSwitcher lang={lang} onSelect={closeAll} />
+              </div>
+              <div className="mt-6 grid grid-cols-2 gap-3">
+                <Link
+                  href="https://app.tractian.com/login"
+                  onClick={closeAll}
+                  className="rounded-md border border-blue-600 px-5 py-3 text-center text-sm font-semibold text-blue-600 hover:bg-blue-50"
+                >
+                  Login
+                </Link>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    closeAll();
+                    window.dispatchEvent(new CustomEvent('open-demo-modal'));
+                  }}
+                  className="rounded-md bg-blue-600 px-5 py-3 text-center text-sm font-semibold text-white hover:bg-blue-700"
+                >
+                  Get Demo
+                </button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      )}
     </>
   );
 }
